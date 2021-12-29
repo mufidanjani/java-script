@@ -1,0 +1,36 @@
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <link rel="stylesheet" href="chat.css">
+     <title>Chat javascript</title>
+ </head>
+ <body>
+
+    <div id="box" style="width: 80%; height: 400px; background-color: lightgreen">
+        <div id="rsChat"></div>
+            <div id="box-input">
+                <div id="input">
+                    <input type="text" name="message" id="message" value="Ketik Pesan">
+                    <button type="submit" id="submit" onclick="showChat();">Kirim</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript">
+    function showChat() {
+        var isiChat = document.getElementById("message").value; 
+
+        var node = document.createElement("div");                 // Create a <li> node
+        var textnode = document.createTextNode(isiChat);         // Create a text node
+        node.appendChild(textnode);                              // Append the text to <li>
+        document.getElementById("rsChat").appendChild(node);
+             // Append <li> to <ul> with id="myList"
+    }   
+
+</script>
+
+     
+ </body>
+ </html>
